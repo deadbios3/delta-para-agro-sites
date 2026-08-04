@@ -51,13 +51,13 @@ function Index() {
               to="/deltaplau"
               className="btn-ember rounded-sm px-7 py-3 font-display text-sm tracking-widest"
             >
-              Дельтаплау — 7 600 ₴
+              Дельтаплау — 7 000 ₴
             </Link>
             <Link
               to="/paraplau"
               className="rounded-sm border border-border bg-background/60 px-7 py-3 font-display text-sm tracking-widest transition-colors hover:bg-secondary"
             >
-              Параплау — 8 200 ₴
+              Параплау — 7 800 ₴
             </Link>
           </div>
         </div>
