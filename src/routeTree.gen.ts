@@ -12,6 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DeltaplauRouteImport } from './routes/deltaplau'
 import { Route as ParaplauRouteImport } from './routes/paraplau'
+import { Route as KupytyStijkuDeltaplauDniproRouteImport } from './routes/kupyty-stijku-deltaplau.dnipro'
+import { Route as KupytyStijkuDeltaplauOdesaRouteImport } from './routes/kupyty-stijku-deltaplau.odesa'
+import { Route as KupytyStijkuDeltaplauPoltavaRouteImport } from './routes/kupyty-stijku-deltaplau.poltava'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +31,84 @@ const ParaplauRoute = ParaplauRouteImport.update({
   path: '/paraplau',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KupytyStijkuDeltaplauDniproRoute =
+  KupytyStijkuDeltaplauDniproRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/dnipro',
+    path: '/kupyty-stijku-deltaplau/dnipro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KupytyStijkuDeltaplauOdesaRoute =
+  KupytyStijkuDeltaplauOdesaRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/odesa',
+    path: '/kupyty-stijku-deltaplau/odesa',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KupytyStijkuDeltaplauPoltavaRoute =
+  KupytyStijkuDeltaplauPoltavaRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/poltava',
+    path: '/kupyty-stijku-deltaplau/poltava',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/deltaplau': typeof DeltaplauRoute
   '/paraplau': typeof ParaplauRoute
+  '/kupyty-stijku-deltaplau/dnipro': typeof KupytyStijkuDeltaplauDniproRoute
+  '/kupyty-stijku-deltaplau/odesa': typeof KupytyStijkuDeltaplauOdesaRoute
+  '/kupyty-stijku-deltaplau/poltava': typeof KupytyStijkuDeltaplauPoltavaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/deltaplau': typeof DeltaplauRoute
   '/paraplau': typeof ParaplauRoute
+  '/kupyty-stijku-deltaplau/dnipro': typeof KupytyStijkuDeltaplauDniproRoute
+  '/kupyty-stijku-deltaplau/odesa': typeof KupytyStijkuDeltaplauOdesaRoute
+  '/kupyty-stijku-deltaplau/poltava': typeof KupytyStijkuDeltaplauPoltavaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/deltaplau': typeof DeltaplauRoute
   '/paraplau': typeof ParaplauRoute
+  '/kupyty-stijku-deltaplau/dnipro': typeof KupytyStijkuDeltaplauDniproRoute
+  '/kupyty-stijku-deltaplau/odesa': typeof KupytyStijkuDeltaplauOdesaRoute
+  '/kupyty-stijku-deltaplau/poltava': typeof KupytyStijkuDeltaplauPoltavaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/deltaplau' | '/paraplau'
+  fullPaths:
+    | '/'
+    | '/deltaplau'
+    | '/paraplau'
+    | '/kupyty-stijku-deltaplau/dnipro'
+    | '/kupyty-stijku-deltaplau/odesa'
+    | '/kupyty-stijku-deltaplau/poltava'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/deltaplau' | '/paraplau'
-  id: '__root__' | '/' | '/deltaplau' | '/paraplau'
+  to:
+    | '/'
+    | '/deltaplau'
+    | '/paraplau'
+    | '/kupyty-stijku-deltaplau/dnipro'
+    | '/kupyty-stijku-deltaplau/odesa'
+    | '/kupyty-stijku-deltaplau/poltava'
+  id:
+    | '__root__'
+    | '/'
+    | '/deltaplau'
+    | '/paraplau'
+    | '/kupyty-stijku-deltaplau/dnipro'
+    | '/kupyty-stijku-deltaplau/odesa'
+    | '/kupyty-stijku-deltaplau/poltava'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DeltaplauRoute: typeof DeltaplauRoute
   ParaplauRoute: typeof ParaplauRoute
+  KupytyStijkuDeltaplauDniproRoute: typeof KupytyStijkuDeltaplauDniproRoute
+  KupytyStijkuDeltaplauOdesaRoute: typeof KupytyStijkuDeltaplauOdesaRoute
+  KupytyStijkuDeltaplauPoltavaRoute: typeof KupytyStijkuDeltaplauPoltavaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +134,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ParaplauRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kupyty-stijku-deltaplau/dnipro': {
+      id: '/kupyty-stijku-deltaplau/dnipro'
+      path: '/kupyty-stijku-deltaplau/dnipro'
+      fullPath: '/kupyty-stijku-deltaplau/dnipro'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauDniproRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kupyty-stijku-deltaplau/odesa': {
+      id: '/kupyty-stijku-deltaplau/odesa'
+      path: '/kupyty-stijku-deltaplau/odesa'
+      fullPath: '/kupyty-stijku-deltaplau/odesa'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauOdesaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kupyty-stijku-deltaplau/poltava': {
+      id: '/kupyty-stijku-deltaplau/poltava'
+      path: '/kupyty-stijku-deltaplau/poltava'
+      fullPath: '/kupyty-stijku-deltaplau/poltava'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauPoltavaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,17 +162,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DeltaplauRoute: DeltaplauRoute,
   ParaplauRoute: ParaplauRoute,
+  KupytyStijkuDeltaplauDniproRoute: KupytyStijkuDeltaplauDniproRoute,
+  KupytyStijkuDeltaplauOdesaRoute: KupytyStijkuDeltaplauOdesaRoute,
+  KupytyStijkuDeltaplauPoltavaRoute: KupytyStijkuDeltaplauPoltavaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
