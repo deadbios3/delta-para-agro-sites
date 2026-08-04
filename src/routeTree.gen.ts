@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DeltaplauRouteImport } from './routes/deltaplau'
+import { Route as ParaplauRouteImport } from './routes/paraplau'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DeltaplauRoute = DeltaplauRouteImport.update({
+  id: '/deltaplau',
+  path: '/deltaplau',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParaplauRoute = ParaplauRouteImport.update({
+  id: '/paraplau',
+  path: '/paraplau',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/deltaplau': typeof DeltaplauRoute
+  '/paraplau': typeof ParaplauRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/deltaplau': typeof DeltaplauRoute
+  '/paraplau': typeof ParaplauRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/deltaplau': typeof DeltaplauRoute
+  '/paraplau': typeof ParaplauRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/deltaplau' | '/paraplau'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/deltaplau' | '/paraplau'
+  id: '__root__' | '/' | '/deltaplau' | '/paraplau'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DeltaplauRoute: typeof DeltaplauRoute
+  ParaplauRoute: typeof ParaplauRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/deltaplau': {
+      id: '/deltaplau'
+      path: '/deltaplau'
+      fullPath: '/deltaplau'
+      preLoaderRoute: typeof DeltaplauRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paraplau': {
+      id: '/paraplau'
+      path: '/paraplau'
+      fullPath: '/paraplau'
+      preLoaderRoute: typeof ParaplauRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DeltaplauRoute: DeltaplauRoute,
+  ParaplauRoute: ParaplauRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
