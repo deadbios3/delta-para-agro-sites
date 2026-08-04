@@ -4,7 +4,7 @@ import { CallToAction } from "@/components/SiteChrome";
 
 const title = "Стійки глибокорихлювача Дельтаплау і Параплау — ДискАгро";
 const description =
-  "Чизельні стійки Дельтаплау (7 600 ₴) та Параплау (8 200 ₴) для плугів ПЛН: сталь 25 мм, борована сталь, наплавка. Виробник, опт і роздріб, Одеса.";
+  "Чизельні стійки Дельтаплау (7 000 ₴) та Параплау (7 800 ₴) для плугів ПЛН: сталь 25 мм, борована сталь, наплавка. Виробник, опт і роздріб, Одеса.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,7 +23,7 @@ const rows = [
   { label: "Товщина стійки", d: "25 мм (09Г2С)", p: "25 мм листова сталь" },
   { label: "Робочі органи", d: "долото 16 мм", p: "лемех 10 мм + долото 16 мм" },
   { label: "Наплавка", d: "«Сормайт»", p: "«Зірмайт», ресурс +30%" },
-  { label: "Ціна", d: "7 600 ₴", p: "8 200 ₴" },
+  { label: "Ціна", d: "7 000 ₴", p: "7 800 ₴" },
 ];
 
 function Index() {
@@ -51,13 +51,13 @@ function Index() {
               to="/deltaplau"
               className="btn-ember rounded-sm px-7 py-3 font-display text-sm tracking-widest"
             >
-              Дельтаплау — 7 600 ₴
+              Дельтаплау — 7 000 ₴
             </Link>
             <Link
               to="/paraplau"
               className="rounded-sm border border-border bg-background/60 px-7 py-3 font-display text-sm tracking-widest transition-colors hover:bg-secondary"
             >
-              Параплау — 8 200 ₴
+              Параплау — 7 800 ₴
             </Link>
           </div>
         </div>
