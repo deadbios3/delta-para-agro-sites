@@ -10,8 +10,8 @@ export type Product = {
   features: string[];
 };
 
-export const PHONE = "+380 (67) 483-37-71";
-export const PHONE_HREF = "tel:+380674833771";
+export const PHONE = "067 481 86 68";
+export const PHONE_HREF = "tel:+380674818668";
 
 export const products: Product[] = [
   {
