@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ProductPage } from "@/components/ProductPage";
 import { getProduct } from "@/data/products";
 
-const title = "Стійка глибокорихлювача Дельтаплау 80 см — 7 600 ₴ | ДискАгро";
+const title = "Стійка глибокорихлювача Дельтаплау 80 см — 7 000 ₴ | ДискАгро";
 const description =
   "Стійка Дельтаплау для плугів ПЛН-3-35...8-40: глибина до 40 см, сталь 09Г2С 25 мм, долото 16 мм, наплавка «Сормайт». Виробник, опт і роздріб.";
 
