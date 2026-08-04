@@ -40,7 +40,7 @@ function Index() {
             Виробник • Одеса • Опт і роздріб
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl leading-[1.05] sm:text-6xl">
-            Дві стійки, які <span className="text-ember">ламають плужну підошву</span>
+            Глибоке рихлення <span className="text-ember">зараз для вас</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
             Чизельні стійки Дельтаплау та Параплау для плугів ПЛН. Сталь 25 мм, гартовані долота,
