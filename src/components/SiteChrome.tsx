@@ -33,7 +33,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card/40">
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-display text-base tracking-widest">ДискАгро</p>
           <p className="mt-2 text-sm text-muted-foreground">
@@ -48,6 +48,18 @@ export function Footer() {
           <Link to="/paraplau" className="mt-1 block hover:text-foreground">
             Стійка Параплау
           </Link>
+        </div>
+        <div className="text-sm text-muted-foreground">
+          <p className="font-display text-xs tracking-widest text-foreground">Регіони</p>
+          <a href="/kupyty-stijku-deltaplau/odesa" className="mt-2 block hover:text-foreground">
+            Стійки в Одесі
+          </a>
+          <a href="/kupyty-stijku-deltaplau/dnipro" className="mt-1 block hover:text-foreground">
+            Стійки в Дніпрі
+          </a>
+          <a href="/kupyty-stijku-deltaplau/poltava" className="mt-1 block hover:text-foreground">
+            Стійки в Полтаві
+          </a>
         </div>
         <div className="text-sm text-muted-foreground">
           <p className="font-display text-xs tracking-widest text-foreground">Контакти</p>
