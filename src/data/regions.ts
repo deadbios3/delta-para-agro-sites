@@ -418,7 +418,7 @@ export const regions: Region[] = [
 
 export const getRegion = (slug: string) => regions.find((r) => r.slug === slug)!;
 
-export const SITE_URL = "diskagro.com";
+export const SITE_URL = "https://diskagro.com";
 
 export function regionHead(r: Region) {
   const url = `${SITE_URL}${REGION_BASE}/${r.slug}`;
