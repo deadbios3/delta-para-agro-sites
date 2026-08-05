@@ -12,9 +12,16 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DeltaplauRouteImport } from './routes/deltaplau'
 import { Route as ParaplauRouteImport } from './routes/paraplau'
+import { Route as KupytyStijkuDeltaplauCherkasyRouteImport } from './routes/kupyty-stijku-deltaplau.cherkasy'
 import { Route as KupytyStijkuDeltaplauDniproRouteImport } from './routes/kupyty-stijku-deltaplau.dnipro'
+import { Route as KupytyStijkuDeltaplauKhersonRouteImport } from './routes/kupyty-stijku-deltaplau.kherson'
+import { Route as KupytyStijkuDeltaplauKhmelnytskyiRouteImport } from './routes/kupyty-stijku-deltaplau.khmelnytskyi'
+import { Route as KupytyStijkuDeltaplauKropyvnytskyiRouteImport } from './routes/kupyty-stijku-deltaplau.kropyvnytskyi'
+import { Route as KupytyStijkuDeltaplauMykolaivRouteImport } from './routes/kupyty-stijku-deltaplau.mykolaiv'
 import { Route as KupytyStijkuDeltaplauOdesaRouteImport } from './routes/kupyty-stijku-deltaplau.odesa'
 import { Route as KupytyStijkuDeltaplauPoltavaRouteImport } from './routes/kupyty-stijku-deltaplau.poltava'
+import { Route as KupytyStijkuDeltaplauVinnytsiaRouteImport } from './routes/kupyty-stijku-deltaplau.vinnytsia'
+import { Route as KupytyStijkuDeltaplauZaporizhzhiaRouteImport } from './routes/kupyty-stijku-deltaplau.zaporizhzhia'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -31,10 +38,40 @@ const ParaplauRoute = ParaplauRouteImport.update({
   path: '/paraplau',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KupytyStijkuDeltaplauCherkasyRoute =
+  KupytyStijkuDeltaplauCherkasyRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/cherkasy',
+    path: '/kupyty-stijku-deltaplau/cherkasy',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const KupytyStijkuDeltaplauDniproRoute =
   KupytyStijkuDeltaplauDniproRouteImport.update({
     id: '/kupyty-stijku-deltaplau/dnipro',
     path: '/kupyty-stijku-deltaplau/dnipro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KupytyStijkuDeltaplauKhersonRoute =
+  KupytyStijkuDeltaplauKhersonRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/kherson',
+    path: '/kupyty-stijku-deltaplau/kherson',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KupytyStijkuDeltaplauKhmelnytskyiRoute =
+  KupytyStijkuDeltaplauKhmelnytskyiRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/khmelnytskyi',
+    path: '/kupyty-stijku-deltaplau/khmelnytskyi',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KupytyStijkuDeltaplauKropyvnytskyiRoute =
+  KupytyStijkuDeltaplauKropyvnytskyiRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/kropyvnytskyi',
+    path: '/kupyty-stijku-deltaplau/kropyvnytskyi',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KupytyStijkuDeltaplauMykolaivRoute =
+  KupytyStijkuDeltaplauMykolaivRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/mykolaiv',
+    path: '/kupyty-stijku-deltaplau/mykolaiv',
     getParentRoute: () => rootRouteImport,
   } as any)
 const KupytyStijkuDeltaplauOdesaRoute =
@@ -49,31 +86,64 @@ const KupytyStijkuDeltaplauPoltavaRoute =
     path: '/kupyty-stijku-deltaplau/poltava',
     getParentRoute: () => rootRouteImport,
   } as any)
+const KupytyStijkuDeltaplauVinnytsiaRoute =
+  KupytyStijkuDeltaplauVinnytsiaRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/vinnytsia',
+    path: '/kupyty-stijku-deltaplau/vinnytsia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KupytyStijkuDeltaplauZaporizhzhiaRoute =
+  KupytyStijkuDeltaplauZaporizhzhiaRouteImport.update({
+    id: '/kupyty-stijku-deltaplau/zaporizhzhia',
+    path: '/kupyty-stijku-deltaplau/zaporizhzhia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/deltaplau': typeof DeltaplauRoute
   '/paraplau': typeof ParaplauRoute
+  '/kupyty-stijku-deltaplau/cherkasy': typeof KupytyStijkuDeltaplauCherkasyRoute
   '/kupyty-stijku-deltaplau/dnipro': typeof KupytyStijkuDeltaplauDniproRoute
+  '/kupyty-stijku-deltaplau/kherson': typeof KupytyStijkuDeltaplauKhersonRoute
+  '/kupyty-stijku-deltaplau/khmelnytskyi': typeof KupytyStijkuDeltaplauKhmelnytskyiRoute
+  '/kupyty-stijku-deltaplau/kropyvnytskyi': typeof KupytyStijkuDeltaplauKropyvnytskyiRoute
+  '/kupyty-stijku-deltaplau/mykolaiv': typeof KupytyStijkuDeltaplauMykolaivRoute
   '/kupyty-stijku-deltaplau/odesa': typeof KupytyStijkuDeltaplauOdesaRoute
   '/kupyty-stijku-deltaplau/poltava': typeof KupytyStijkuDeltaplauPoltavaRoute
+  '/kupyty-stijku-deltaplau/vinnytsia': typeof KupytyStijkuDeltaplauVinnytsiaRoute
+  '/kupyty-stijku-deltaplau/zaporizhzhia': typeof KupytyStijkuDeltaplauZaporizhzhiaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/deltaplau': typeof DeltaplauRoute
   '/paraplau': typeof ParaplauRoute
+  '/kupyty-stijku-deltaplau/cherkasy': typeof KupytyStijkuDeltaplauCherkasyRoute
   '/kupyty-stijku-deltaplau/dnipro': typeof KupytyStijkuDeltaplauDniproRoute
+  '/kupyty-stijku-deltaplau/kherson': typeof KupytyStijkuDeltaplauKhersonRoute
+  '/kupyty-stijku-deltaplau/khmelnytskyi': typeof KupytyStijkuDeltaplauKhmelnytskyiRoute
+  '/kupyty-stijku-deltaplau/kropyvnytskyi': typeof KupytyStijkuDeltaplauKropyvnytskyiRoute
+  '/kupyty-stijku-deltaplau/mykolaiv': typeof KupytyStijkuDeltaplauMykolaivRoute
   '/kupyty-stijku-deltaplau/odesa': typeof KupytyStijkuDeltaplauOdesaRoute
   '/kupyty-stijku-deltaplau/poltava': typeof KupytyStijkuDeltaplauPoltavaRoute
+  '/kupyty-stijku-deltaplau/vinnytsia': typeof KupytyStijkuDeltaplauVinnytsiaRoute
+  '/kupyty-stijku-deltaplau/zaporizhzhia': typeof KupytyStijkuDeltaplauZaporizhzhiaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/deltaplau': typeof DeltaplauRoute
   '/paraplau': typeof ParaplauRoute
+  '/kupyty-stijku-deltaplau/cherkasy': typeof KupytyStijkuDeltaplauCherkasyRoute
   '/kupyty-stijku-deltaplau/dnipro': typeof KupytyStijkuDeltaplauDniproRoute
+  '/kupyty-stijku-deltaplau/kherson': typeof KupytyStijkuDeltaplauKhersonRoute
+  '/kupyty-stijku-deltaplau/khmelnytskyi': typeof KupytyStijkuDeltaplauKhmelnytskyiRoute
+  '/kupyty-stijku-deltaplau/kropyvnytskyi': typeof KupytyStijkuDeltaplauKropyvnytskyiRoute
+  '/kupyty-stijku-deltaplau/mykolaiv': typeof KupytyStijkuDeltaplauMykolaivRoute
   '/kupyty-stijku-deltaplau/odesa': typeof KupytyStijkuDeltaplauOdesaRoute
   '/kupyty-stijku-deltaplau/poltava': typeof KupytyStijkuDeltaplauPoltavaRoute
+  '/kupyty-stijku-deltaplau/vinnytsia': typeof KupytyStijkuDeltaplauVinnytsiaRoute
+  '/kupyty-stijku-deltaplau/zaporizhzhia': typeof KupytyStijkuDeltaplauZaporizhzhiaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,34 +151,62 @@ export interface FileRouteTypes {
     | '/'
     | '/deltaplau'
     | '/paraplau'
+    | '/kupyty-stijku-deltaplau/cherkasy'
     | '/kupyty-stijku-deltaplau/dnipro'
+    | '/kupyty-stijku-deltaplau/kherson'
+    | '/kupyty-stijku-deltaplau/khmelnytskyi'
+    | '/kupyty-stijku-deltaplau/kropyvnytskyi'
+    | '/kupyty-stijku-deltaplau/mykolaiv'
     | '/kupyty-stijku-deltaplau/odesa'
     | '/kupyty-stijku-deltaplau/poltava'
+    | '/kupyty-stijku-deltaplau/vinnytsia'
+    | '/kupyty-stijku-deltaplau/zaporizhzhia'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/deltaplau'
     | '/paraplau'
+    | '/kupyty-stijku-deltaplau/cherkasy'
     | '/kupyty-stijku-deltaplau/dnipro'
+    | '/kupyty-stijku-deltaplau/kherson'
+    | '/kupyty-stijku-deltaplau/khmelnytskyi'
+    | '/kupyty-stijku-deltaplau/kropyvnytskyi'
+    | '/kupyty-stijku-deltaplau/mykolaiv'
     | '/kupyty-stijku-deltaplau/odesa'
     | '/kupyty-stijku-deltaplau/poltava'
+    | '/kupyty-stijku-deltaplau/vinnytsia'
+    | '/kupyty-stijku-deltaplau/zaporizhzhia'
   id:
     | '__root__'
     | '/'
     | '/deltaplau'
     | '/paraplau'
+    | '/kupyty-stijku-deltaplau/cherkasy'
     | '/kupyty-stijku-deltaplau/dnipro'
+    | '/kupyty-stijku-deltaplau/kherson'
+    | '/kupyty-stijku-deltaplau/khmelnytskyi'
+    | '/kupyty-stijku-deltaplau/kropyvnytskyi'
+    | '/kupyty-stijku-deltaplau/mykolaiv'
     | '/kupyty-stijku-deltaplau/odesa'
     | '/kupyty-stijku-deltaplau/poltava'
+    | '/kupyty-stijku-deltaplau/vinnytsia'
+    | '/kupyty-stijku-deltaplau/zaporizhzhia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DeltaplauRoute: typeof DeltaplauRoute
   ParaplauRoute: typeof ParaplauRoute
+  KupytyStijkuDeltaplauCherkasyRoute: typeof KupytyStijkuDeltaplauCherkasyRoute
   KupytyStijkuDeltaplauDniproRoute: typeof KupytyStijkuDeltaplauDniproRoute
+  KupytyStijkuDeltaplauKhersonRoute: typeof KupytyStijkuDeltaplauKhersonRoute
+  KupytyStijkuDeltaplauKhmelnytskyiRoute: typeof KupytyStijkuDeltaplauKhmelnytskyiRoute
+  KupytyStijkuDeltaplauKropyvnytskyiRoute: typeof KupytyStijkuDeltaplauKropyvnytskyiRoute
+  KupytyStijkuDeltaplauMykolaivRoute: typeof KupytyStijkuDeltaplauMykolaivRoute
   KupytyStijkuDeltaplauOdesaRoute: typeof KupytyStijkuDeltaplauOdesaRoute
   KupytyStijkuDeltaplauPoltavaRoute: typeof KupytyStijkuDeltaplauPoltavaRoute
+  KupytyStijkuDeltaplauVinnytsiaRoute: typeof KupytyStijkuDeltaplauVinnytsiaRoute
+  KupytyStijkuDeltaplauZaporizhzhiaRoute: typeof KupytyStijkuDeltaplauZaporizhzhiaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -134,11 +232,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ParaplauRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kupyty-stijku-deltaplau/cherkasy': {
+      id: '/kupyty-stijku-deltaplau/cherkasy'
+      path: '/kupyty-stijku-deltaplau/cherkasy'
+      fullPath: '/kupyty-stijku-deltaplau/cherkasy'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauCherkasyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/kupyty-stijku-deltaplau/dnipro': {
       id: '/kupyty-stijku-deltaplau/dnipro'
       path: '/kupyty-stijku-deltaplau/dnipro'
       fullPath: '/kupyty-stijku-deltaplau/dnipro'
       preLoaderRoute: typeof KupytyStijkuDeltaplauDniproRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kupyty-stijku-deltaplau/kherson': {
+      id: '/kupyty-stijku-deltaplau/kherson'
+      path: '/kupyty-stijku-deltaplau/kherson'
+      fullPath: '/kupyty-stijku-deltaplau/kherson'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauKhersonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kupyty-stijku-deltaplau/khmelnytskyi': {
+      id: '/kupyty-stijku-deltaplau/khmelnytskyi'
+      path: '/kupyty-stijku-deltaplau/khmelnytskyi'
+      fullPath: '/kupyty-stijku-deltaplau/khmelnytskyi'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauKhmelnytskyiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kupyty-stijku-deltaplau/kropyvnytskyi': {
+      id: '/kupyty-stijku-deltaplau/kropyvnytskyi'
+      path: '/kupyty-stijku-deltaplau/kropyvnytskyi'
+      fullPath: '/kupyty-stijku-deltaplau/kropyvnytskyi'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauKropyvnytskyiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kupyty-stijku-deltaplau/mykolaiv': {
+      id: '/kupyty-stijku-deltaplau/mykolaiv'
+      path: '/kupyty-stijku-deltaplau/mykolaiv'
+      fullPath: '/kupyty-stijku-deltaplau/mykolaiv'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauMykolaivRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kupyty-stijku-deltaplau/odesa': {
@@ -155,6 +288,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KupytyStijkuDeltaplauPoltavaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kupyty-stijku-deltaplau/vinnytsia': {
+      id: '/kupyty-stijku-deltaplau/vinnytsia'
+      path: '/kupyty-stijku-deltaplau/vinnytsia'
+      fullPath: '/kupyty-stijku-deltaplau/vinnytsia'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauVinnytsiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kupyty-stijku-deltaplau/zaporizhzhia': {
+      id: '/kupyty-stijku-deltaplau/zaporizhzhia'
+      path: '/kupyty-stijku-deltaplau/zaporizhzhia'
+      fullPath: '/kupyty-stijku-deltaplau/zaporizhzhia'
+      preLoaderRoute: typeof KupytyStijkuDeltaplauZaporizhzhiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,10 +309,30 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DeltaplauRoute: DeltaplauRoute,
   ParaplauRoute: ParaplauRoute,
+  KupytyStijkuDeltaplauCherkasyRoute: KupytyStijkuDeltaplauCherkasyRoute,
   KupytyStijkuDeltaplauDniproRoute: KupytyStijkuDeltaplauDniproRoute,
+  KupytyStijkuDeltaplauKhersonRoute: KupytyStijkuDeltaplauKhersonRoute,
+  KupytyStijkuDeltaplauKhmelnytskyiRoute:
+    KupytyStijkuDeltaplauKhmelnytskyiRoute,
+  KupytyStijkuDeltaplauKropyvnytskyiRoute:
+    KupytyStijkuDeltaplauKropyvnytskyiRoute,
+  KupytyStijkuDeltaplauMykolaivRoute: KupytyStijkuDeltaplauMykolaivRoute,
   KupytyStijkuDeltaplauOdesaRoute: KupytyStijkuDeltaplauOdesaRoute,
   KupytyStijkuDeltaplauPoltavaRoute: KupytyStijkuDeltaplauPoltavaRoute,
+  KupytyStijkuDeltaplauVinnytsiaRoute: KupytyStijkuDeltaplauVinnytsiaRoute,
+  KupytyStijkuDeltaplauZaporizhzhiaRoute:
+    KupytyStijkuDeltaplauZaporizhzhiaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
