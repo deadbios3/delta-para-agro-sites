@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { PHONE, PHONE_HREF } from "@/data/products";
+import { regions, REGION_BASE } from "@/data/regions";
 
 export function Header() {
   return (
@@ -51,15 +52,15 @@ export function Footer() {
         </div>
         <div className="text-sm text-muted-foreground">
           <p className="font-display text-xs tracking-widest text-foreground">Регіони</p>
-          <a href="/kupyty-stijku-deltaplau/odesa" className="mt-2 block hover:text-foreground">
-            Стійки в Одесі
-          </a>
-          <a href="/kupyty-stijku-deltaplau/dnipro" className="mt-1 block hover:text-foreground">
-            Стійки в Дніпрі
-          </a>
-          <a href="/kupyty-stijku-deltaplau/poltava" className="mt-1 block hover:text-foreground">
-            Стійки в Полтаві
-          </a>
+          {regions.map((r) => (
+            <a
+              key={r.slug}
+              href={`${REGION_BASE}/${r.slug}`}
+              className="mt-1 block hover:text-foreground"
+            >
+              Стійки {r.cityIn}
+            </a>
+          ))}
         </div>
         <div className="text-sm text-muted-foreground">
           <p className="font-display text-xs tracking-widest text-foreground">Контакти</p>
