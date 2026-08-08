@@ -432,7 +432,7 @@ export function regionHead(r: Region) {
       { property: "og:url", content: url },
     ],
     links: [{ rel: "canonical", href: url }],
-    scripts: [
+scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -455,6 +455,7 @@ export function regionHead(r: Region) {
           "@context": "https://schema.org",
           "@type": "Product",
           name: "Стійка Дельтаплау",
+          image: `${SITE_URL}/images/delta2.jpg`,
           description: r.productDescription,
           brand: { "@type": "Brand", name: "ДискАгро" },
           offers: {
@@ -466,6 +467,23 @@ export function regionHead(r: Region) {
           },
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Стійка Параплау",
+          image: `${SITE_URL}/images/para2.jpg`,
+          description:
+            "Стійка глибокорозпушувача Параплау для плугів ПЛН, лемех 10 мм, долото 16 мм, наплавка «Зірмайт».",
+          brand: { "@type": "Brand", name: "ДискАгро" },
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "UAH",
+            price: "7800",
+            availability: "https://schema.org/InStock",
+            areaServed: r.city,
+          },
+        }),
+      },
     ],
-  };
-}
