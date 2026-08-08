@@ -458,15 +458,20 @@ scripts: [
           image: `${SITE_URL}/images/delta2.jpg`,
           description: r.productDescription,
           brand: { "@type": "Brand", name: "ДискАгро" },
-          offers: {
+    offers: {
             "@type": "Offer",
             priceCurrency: "UAH",
             price: "7000",
             availability: "https://schema.org/InStock",
             areaServed: r.city,
+            hasMerchantReturnPolicy: {
+              "@type": "MerchantReturnPolicy",
+              applicableCountry: "UA",
+              returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+              merchantReturnDays: 14,
+              returnFees: "https://schema.org/ReturnFeesCustomerResponsibility",
+            },
           },
-        }),
-      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -477,13 +482,18 @@ scripts: [
           description:
             "Стійка глибокорозпушувача Параплау для плугів ПЛН, лемех 10 мм, долото 16 мм, наплавка «Зірмайт».",
           brand: { "@type": "Brand", name: "ДискАгро" },
-          offers: {
+     offers: {
             "@type": "Offer",
             priceCurrency: "UAH",
-            price: "7800",
+            price: "7000",
             availability: "https://schema.org/InStock",
             areaServed: r.city,
+            hasMerchantReturnPolicy: {
+              "@type": "MerchantReturnPolicy",
+              applicableCountry: "UA",
+              returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+              merchantReturnDays: 14,
+              returnFees: "https://schema.org/ReturnFeesCustomerResponsibility",
+            },
           },
-        }),
-      },
     ],
