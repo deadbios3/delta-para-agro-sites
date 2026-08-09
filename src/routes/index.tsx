@@ -1,3 +1,16 @@
+const gaScript = document.createElement("script");
+gaScript.async = true;
+gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+document.head.appendChild(gaScript);
+
+const gaInit = document.createElement("script");
+gaInit.innerHTML = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-01WSQJC0Q3');
+`;
+document.head.appendChild(gaInit);
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PHONE, PHONE_HREF, products } from "@/data/products";
 import { CallToAction } from "@/components/SiteChrome";
