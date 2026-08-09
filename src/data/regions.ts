@@ -458,6 +458,27 @@ scripts: [
           image: `${SITE_URL}/images/delta2.jpg`,
           description: r.productDescription,
           brand: { "@type": "Brand", name: "ДискАгро" },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4",
+            bestRating: "5",
+            worstRating: "1",
+            reviewCount: "13",
+          },
+          review: [
+            {
+              "@type": "Review",
+              author: { "@type": "Person", name: "Олександр Ф." },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              reviewBody: "Клієнт залишив відмінний відгук про співпрацю з компанією.",
+            },
+            {
+              "@type": "Review",
+              author: { "@type": "Person", name: "Володимир К." },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              reviewBody: "Позитивний досвід замовлення, угода підтверджена",
+            },
+          ],
           offers: {
             "@type": "Offer",
             priceCurrency: "UAH",
@@ -484,6 +505,27 @@ scripts: [
           description:
             "Стійка глибокорозпушувача Параплау для плугів ПЛН, лемех 10 мм, долото 16 мм, наплавка «Зірмайт».",
           brand: { "@type": "Brand", name: "ДискАгро" },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4",
+            bestRating: "5",
+            worstRating: "1",
+            reviewCount: "13",
+          },
+          review: [
+            {
+              "@type": "Review",
+              author: { "@type": "Person", name: "Олександр Ф." },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              reviewBody: "Клієнт залишив відмінний відгук про співпрацю з компанією.",
+            },
+            {
+              "@type": "Review",
+              author: { "@type": "Person", name: "Володимир К." },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              reviewBody: "Позитивний досвід замовлення, угода підтверджена на Prom.ua.",
+            },
+          ],
           offers: {
             "@type": "Offer",
             priceCurrency: "UAH",
