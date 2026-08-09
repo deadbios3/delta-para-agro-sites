@@ -432,7 +432,7 @@ export function regionHead(r: Region) {
       { property: "og:url", content: url },
     ],
     links: [{ rel: "canonical", href: url }],
-scripts: [
+    scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -476,10 +476,10 @@ scripts: [
               "@type": "Review",
               author: { "@type": "Person", name: "Володимир К." },
               reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-              reviewBody: "Позитивний досвід замовлення, угода підтверджена",
+              reviewBody: "Позитивний досвід замовлення, угода підтверджена на Prom.ua.",
             },
           ],
-    offers: {
+          offers: {
             "@type": "Offer",
             priceCurrency: "UAH",
             price: "7000",
@@ -503,38 +503,9 @@ scripts: [
               },
             },
           },
+        }),
+      },
       {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: "Стійка Параплау",
-          image: `${SITE_URL}/images/para2.jpg`,
-          description:
-            "Стійка глибокорозпушувача Параплау для плугів ПЛН, лемех 10 мм, долото 16 мм, наплавка «Зірмайт».",
-          brand: { "@type": "Brand", name: "ДискАгро" },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4",
-            bestRating: "5",
-            worstRating: "1",
-            reviewCount: "13",
-          },
-          review: [
-            {
-              "@type": "Review",
-              author: { "@type": "Person", name: "Олександр Ф." },
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-              reviewBody: "Клієнт залишив відмінний відгук про співпрацю з компанією.",
-            },
-            {
-              "@type": "Review",
-              author: { "@type": "Person", name: "Володимир К." },
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-              reviewBody: "Позитивний досвід замовлення, угода підтверджена на Prom.ua.",
-            },
-          ],
-{
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
@@ -591,3 +562,6 @@ scripts: [
           },
         }),
       },
+    ],
+  };
+}
