@@ -2,6 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { PHONE, PHONE_HREF } from "@/data/products";
 import { regions, REGION_BASE } from "@/data/regions";
 
+function trackPhoneClick(location: string) {
+  const gtag = (window as any).gtag;
+  if (typeof gtag === "function") {
+    gtag("event", "phone_click", {
+      event_category: "contact",
+      event_label: location,
+    });
+  }
+}
+
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur">
@@ -20,8 +30,9 @@ export function Header() {
             Порівняння
           </Link>
         </nav>
-        <a
+        
           href={PHONE_HREF}
+          onClick={() => trackPhoneClick("header")}
           className="btn-ember rounded-sm px-4 py-2 text-sm font-semibold tracking-wide"
         >
           {PHONE}
@@ -53,7 +64,7 @@ export function Footer() {
         <div className="text-sm text-muted-foreground">
           <p className="font-display text-xs tracking-widest text-foreground">Регіони</p>
           {regions.map((r) => (
-            <a
+            
               key={r.slug}
               href={`${REGION_BASE}/${r.slug}`}
               className="mt-1 block hover:text-foreground"
@@ -64,7 +75,11 @@ export function Footer() {
         </div>
         <div className="text-sm text-muted-foreground">
           <p className="font-display text-xs tracking-widest text-foreground">Контакти</p>
-          <a href={PHONE_HREF} className="mt-2 block hover:text-foreground">
+          
+            href={PHONE_HREF}
+            onClick={() => trackPhoneClick("footer")}
+            className="mt-2 block hover:text-foreground"
+          >
             {PHONE}
           </a>
           <p className="mt-1">Опт і роздріб. Відправка по всій Україні.</p>
@@ -86,8 +101,9 @@ export function CallToAction({ title }: { title: string }) {
           Підкажемо, яка стійка підійде під вашу раму, розрахуємо комплект і відправимо в день
           замовлення.
         </p>
-        <a
+        
           href={PHONE_HREF}
+          onClick={() => trackPhoneClick("cta_section")}
           className="btn-ember mt-6 inline-block rounded-sm px-8 py-3 font-display text-sm tracking-widest"
         >
           Зателефонувати {PHONE}
