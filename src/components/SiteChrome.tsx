@@ -30,7 +30,7 @@ export function Header() {
             Порівняння
           </Link>
         </nav>
-        
+        <a
           href={PHONE_HREF}
           onClick={() => trackPhoneClick("header")}
           className="btn-ember rounded-sm px-4 py-2 text-sm font-semibold tracking-wide"
@@ -64,7 +64,7 @@ export function Footer() {
         <div className="text-sm text-muted-foreground">
           <p className="font-display text-xs tracking-widest text-foreground">Регіони</p>
           {regions.map((r) => (
-            
+            <a
               key={r.slug}
               href={`${REGION_BASE}/${r.slug}`}
               className="mt-1 block hover:text-foreground"
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
         <div className="text-sm text-muted-foreground">
           <p className="font-display text-xs tracking-widest text-foreground">Контакти</p>
-          
+          <a
             href={PHONE_HREF}
             onClick={() => trackPhoneClick("footer")}
             className="mt-2 block hover:text-foreground"
@@ -101,7 +101,7 @@ export function CallToAction({ title }: { title: string }) {
           Підкажемо, яка стійка підійде під вашу раму, розрахуємо комплект і відправимо в день
           замовлення.
         </p>
-        
+        <a
           href={PHONE_HREF}
           onClick={() => trackPhoneClick("cta_section")}
           className="btn-ember mt-6 inline-block rounded-sm px-8 py-3 font-display text-sm tracking-widest"
